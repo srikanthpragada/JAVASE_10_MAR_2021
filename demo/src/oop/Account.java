@@ -6,13 +6,13 @@ public class Account {
    private String ahname;
    private double balance;
    
-   // methods
-   public void open(int no, String name) {
+   // constructor
+   public Account(int no, String name) {
 	   acno = no;
 	   ahname = name;
 	   balance = 0;
    }
-   
+   // Methods 
    public void print() {
 	   System.out.printf("%d %s %f\n", acno,ahname,balance);
    }
