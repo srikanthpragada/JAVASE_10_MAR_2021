@@ -51,6 +51,12 @@ public class TestPerson {
 	public static void main(String[] args) {
 		MyStudent s = new MyStudent("James", "james@sun.com", "Java");
 		s.print();
+		
+		Person p = new MyEmployee("Abc","abc@gmail.com","Prog");
+		
+		if (p instanceof MyStudent) {
+		    MyStudent s2 = (MyStudent) p;
+		}
 
 	}
 
