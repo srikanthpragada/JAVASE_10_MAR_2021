@@ -1,6 +1,6 @@
 package oop;
 
-class Person {
+abstract class Person {
 	protected String name, email;
 
 	public Person(String name, String email) {
@@ -12,7 +12,8 @@ class Person {
 		System.out.println(this.name);
 		System.out.println(this.email);
 	}
-
+	
+	public abstract String getOccupation();
 }
 
 class MyStudent extends Person {
@@ -29,6 +30,11 @@ class MyStudent extends Person {
 		super.print();
 		System.out.println(this.course);
 	}
+	
+	@Override 
+	public String getOccupation() {
+		return "Course = " + this.course; 
+	}
 }
 
 class MyEmployee extends Person {
@@ -43,21 +49,22 @@ class MyEmployee extends Person {
 		super.print();
 		System.out.println(this.job);
 	}
-
+	
+	public String getOccupation() {
+		return "Job = " + this.job;
+	}
 }
 
 public class TestPerson {
 
 	public static void main(String[] args) {
-		MyStudent s = new MyStudent("James", "james@sun.com", "Java");
-		s.print();
+		Person p = new MyStudent("James", "james@sun.com", "Java");
+		p.print(); // Runtime Polymorphism 
+		System.out.println(p.getOccupation());
 		
-		Person p = new MyEmployee("Abc","abc@gmail.com","Prog");
-		
-		if (p instanceof MyStudent) {
-		    MyStudent s2 = (MyStudent) p;
-		}
-
+		p = new MyEmployee("Mark","marks@gmail.com","Programmer");
+		p.print(); // Runtime Polymorphism 
+		System.out.println(p.getOccupation());
 	}
 
 }
