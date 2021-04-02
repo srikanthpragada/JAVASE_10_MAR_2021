@@ -1,5 +1,4 @@
 package library;
-
 class Person
 {
 	private String name;
