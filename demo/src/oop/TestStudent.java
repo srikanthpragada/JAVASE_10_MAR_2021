@@ -2,8 +2,9 @@ package oop;
 
 class Student {
 	private String name;
-	private int course;
+	int course; // default access 
 	private int feepaid;
+	// private Payment paydetails;
 
 	public Student(String name, int course, int feepaid) {
 		this.name = name;
