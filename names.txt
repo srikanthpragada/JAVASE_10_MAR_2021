@@ -3,3 +3,7 @@ Python
 JavaScript
 C#
 TypeScript
+C#
+Java
+SQl
+C
