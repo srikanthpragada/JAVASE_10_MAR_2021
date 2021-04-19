@@ -22,8 +22,5 @@ public class LambdaDemo2 {
 		 
 		 for(var n : names)
 			 System.out.println(n);
-		 
-
 	}
-
 }
