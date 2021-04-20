@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class SearchJavaPrograms {
 
@@ -17,8 +18,11 @@ public class SearchJavaPrograms {
 
 	public static void main(String[] args) throws IOException {
 		String search = "Reader";
+		
+		
 
 		Files.walk(Paths.get("d:\\classroom\\mar10\\demo"))
+		     .filter(p -> p.toString().endsWith(".java"))
 		     .filter(p -> FileContainsString(p, search))
 			 .forEach(System.out::println);
 	}
