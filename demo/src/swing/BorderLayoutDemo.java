@@ -16,9 +16,10 @@ public class BorderLayoutDemo extends JFrame {
 		// default layout manager is BorderLayout
 		Container c = getContentPane();
 		c.add(new JButton("Top Button"), BorderLayout.PAGE_START);
-		c.add(new JButton("Bottom Button"), BorderLayout.PAGE_END);
+		c.add(new JButton("Bottom Button"), BorderLayout.SOUTH);
 		c.add(new JButton("Left Button"), BorderLayout.LINE_START);
 		c.add(new JButton("Right Button"), BorderLayout.LINE_END);
+		
 		// place multiple components at the center using JPanel
 		JPanel p = new JPanel(); // default FlowLayout
 		p.add(new JLabel("Label"));

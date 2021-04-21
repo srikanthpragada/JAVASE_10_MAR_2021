@@ -23,8 +23,8 @@ public class FileViewerJava12 extends JFrame {
 	public FileViewerJava12() {
 		super("File Viewer 1.0");
 		tfFilename = new JTextField(20);
-		taContents = new JTextArea(); // Multiline textbox
-		taContents.setEditable(false); // readonly
+		taContents = new JTextArea(); // Multi-line textbox
+		taContents.setEditable(false); // Read-only
 
 		JScrollPane sp = new JScrollPane(taContents,
 				JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
